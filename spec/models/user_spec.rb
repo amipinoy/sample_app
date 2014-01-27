@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+<<<<<<< HEAD
 
   before do
     @user = User.new(name: "Example User", email: "user@example.com",
@@ -73,4 +74,14 @@ describe User do
       specify { expect(user_for_invalid_password).to be_false }
     end
   end
+=======
+  
+  before { @user = User.new(name: "Example User", email: "user@example.com") }
+  
+  subject { @user }
+  
+  it { should respond_to(:name) }
+  it { should respond_to(:email) }
+  
+>>>>>>> modeling-users
 end
